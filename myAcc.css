@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+h1{
+    color: rgb(25, 71, 3);
+}
+h2{
+    color: black;
+}
+.side-menu{
+    position: fixed;
+    background: rgb(73, 151, 115);
+    width: 50vh;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.side-menu .brand-name{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -25px;
+}
+.side-menu li a{
+    font-size: 20px;
+    padding: 10px 20px;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.side-menu li a img{
+    width: 25px;
+    height: 25px;
+}
+.side-menu li .onlogo img{
+    background: none;
+    width: 30px;
+    height: 40px;
+}
+.side-menu li .onlogo img{
+    display: none;
+}
+
+.side-menu li:hover{
+    background: rgb(174, 245, 174);
+    color: black;
+}
+.container{
+    background-image: url(bg-14.jpg);
+    position: absolute;
+    right: 0;
+    width: 80vw;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container .header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    height: 10vh;
+    background: rgb(220, 250, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.container .header .nav{
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.container .header .nav .title{
+    flex: 50;
+}
+.container .header .nav .title img{
+    height: 40px;
+    width: 30px;
+}
+.container .header .nav .title h2 span{
+    font-size: 30px;
+    margin: 5px;
+    margin-top: 55px;
+}
+.container .header .nav .notifi{
+    flex: 4;
+}
+.container .header .nav .notifi img{
+    width: 35px;
+    height: 35px;
+}
+.container .header .nav .account{
+    flex: 1;
+}
+.container .header .nav .account img{
+    width: 40px;
+    height: 40px;
+}
+.sub-menu-1{
+    display: none;
+}
+.container .header .nav .account:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background: rgb(174, 245, 174);
+    margin-top: 0px;
+    margin-left: -100px;
+}
+.container .header .nav .account:hover .sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+}
+.container .header .nav .account:hover .sub-menu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted black;
+    color: wheat;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.container .header .nav .account:hover .sub-menu-1 ul li a{
+    color: black;
+}
+.container .header .nav .account:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+
+.container .content{
+    position: relative;
+    margin-top: 10vh;
+    min-height: 90vh;
+}
+.container .content .cards{
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container .content .cards .card{
+    width: 1050px;
+    height: 480px;
+    background: white;
+    margin: 20px 20px;
+    border-radius: 7px;
+    box-shadow:0 0 20px rgb(26, 1, 54);
+}
+.container .content .cards .card .icon-case{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container .content .cards .card .box{
+    padding: 10px 20px;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.container .content .cards .card .box .allset{
+    padding: 5px 10px;
+    display: inlinet;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.button1{
+    color: #fff;
+    background: rgb(51, 173, 51);
+    border-radius: 5px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin-top: 20px;
+    height: 35px;
+    width: 80px;
+}
+.button1:hover{
+    background: rgb(133, 233, 133);
+}
+
+
+@media screen and (max-width: 465px){
+    .side-menu .brand-name{
+        display: none;
+    }
+    .side-menu li span{
+        display: none;
+    }
+    .side-menu li a{
+        padding: 20px 14px;
+    }
+    .side-menu li .onlogo img{
+        display: inline;
+        align-items: center;
+        margin: 10px;
+    }
+}
+
+
+@media screen and (max-width: 465px){
+    .container .header{
+        height: 10vh;
+        width: 85vw;
+    }
+    .container .header .nav{
+        width: 90%;
+        display: flex;
+        align-items: center;
+    }
+    .container .header .nav .title img{
+        display: none;
+    }
+    .container .header .nav .title h2 span{
+        flex: 50;
+        font-size: 18px;
+        margin-top: 5px
+    }
+    .container .header .nav .notifi{
+        flex: 12;
+    }
+    .container .header .nav .notifi img{
+        width: 25px;
+        height: 25px;
+    }
+    .container .header .nav .account{
+        flex: 1;
+    }
+    .container .header .nav .account img{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 465px){
+    .container{
+    background-image: url(bg-14.jpg);
+    position: absolute;
+    right: 0;
+    width: 85vw;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    }
+    .container .content{
+        position: relative;
+        margin-top: 10vh;
+        min-height: 90vh;
+    }
+    .container .content .cards{
+        padding: 1px 1px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+    }
+    .container .content .cards .card{
+        width: 350px;
+        height: 550px;
+        background: white;
+        margin: 10px 10px;
+        border-radius: 7px;
+        box-shadow:0 0 20px rgb(26, 1, 54);
+        
+    }
+    .container .content .cards .card .icon-case{
+        padding: 5px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-size: 12px; 
+    }
+    .container .content .cards .card .icon-case img{
+        height: 40px;
+        width: 40px;
+    }
+    .container .content .cards .card .box{
+        padding: 10px 20px;
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+    }
+    .container .content .cards .card .box .allset{
+        padding: 5px 10px;
+        display: inline;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-size: 12px; 
+    }
+}
+
+@media screen and (max-width: 465px){
+    .container .header .nav .account:hover .sub-menu-1 ul{
+        display: block;
+        margin: 5px;
+        font-size: 15px;
+        color: darkgreen;
+    }
+}
